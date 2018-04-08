@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{98E1C553-C46B-4B59-B292-CC9FE6C45BDB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{799E73DC-CA60-409A-8814-1438D104521F}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "PluralsightWebAPI", "src\PluralsightWebAPI\PluralsightWebAPI.xproj", "{3DE1A218-2E79-4609-A6E7-499AA94B8C59}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "MyCodeCamp.Data", "..\MyCodeCampAPISolution\src\MyCodeCamp.Data\MyCodeCamp.Data.xproj", "{27499CF7-2060-4F57-9166-9A2468674626}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "MyCodeCamp.Data", "src\MyCodeCamp.Data\MyCodeCamp.Data.xproj", "{CE485225-798E-410E-83CD-204FF5F7675D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3DE1A218-2E79-4609-A6E7-499AA94B8C59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DE1A218-2E79-4609-A6E7-499AA94B8C59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DE1A218-2E79-4609-A6E7-499AA94B8C59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DE1A218-2E79-4609-A6E7-499AA94B8C59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27499CF7-2060-4F57-9166-9A2468674626}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27499CF7-2060-4F57-9166-9A2468674626}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27499CF7-2060-4F57-9166-9A2468674626}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27499CF7-2060-4F57-9166-9A2468674626}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE485225-798E-410E-83CD-204FF5F7675D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE485225-798E-410E-83CD-204FF5F7675D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE485225-798E-410E-83CD-204FF5F7675D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE485225-798E-410E-83CD-204FF5F7675D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3DE1A218-2E79-4609-A6E7-499AA94B8C59} = {98E1C553-C46B-4B59-B292-CC9FE6C45BDB}
+		{CE485225-798E-410E-83CD-204FF5F7675D} = {98E1C553-C46B-4B59-B292-CC9FE6C45BDB}
+	EndGlobalSection
+EndGlobal
