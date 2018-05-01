@@ -12,7 +12,7 @@ using PluralsightWebAPI.Models;
 namespace PluralsightWebAPI.Controllers
 {
     [Route("api/[controller]")]
-    public class CampController : Controller
+    public class CampController : BaseController
     {
         private ICampRepository _camp;
         private ILogger<CampController> _logger;
@@ -46,7 +46,7 @@ namespace PluralsightWebAPI.Controllers
                 else
                 camp = _camp.GetCamp(id);
 
-                if (camp == null) return NotFound($"Camp {id} was not found");
+                if (camp == null) return NotFound($"Camp {id} was not found in Azure new build/deployment");
                 return Ok(_mapper.Map<CampModel>(camp));
             }
             catch
@@ -121,14 +121,14 @@ namespace PluralsightWebAPI.Controllers
                 _camp.Delete(oldCamp);
                 if(await _camp.SaveAllAsync())
                 {
-                    return Ok("Camp Deleted");
+                    return Ok("Camp Deleted Azure");
                 } 
             }
             catch(Exception ex)
             {
                 return BadRequest(ex.Message);
             }
-            return BadRequest("Could not find Camp");
+            return BadRequest("Could not find Camp in Azure");
         }
     }
 }

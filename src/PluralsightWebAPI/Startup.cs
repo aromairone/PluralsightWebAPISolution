@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using MyCodeCamp.Data;
 using AutoMapper;
+using Microsoft.AspNetCore.Http;
 
 namespace PluralsightWebAPI
 {
@@ -41,6 +42,7 @@ namespace PluralsightWebAPI
             services.AddScoped<ICampRepository, CampRepository>();
             services.AddTransient<CampDbInitializer>();
 
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             //Profile class under the models folder serves as the mapping Entity object
             //This tells Automapper how to map the objects
             services.AddAutoMapper();
@@ -51,8 +53,7 @@ namespace PluralsightWebAPI
                 .AddJsonOptions(opt =>
                 {
                     opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
-                })
-                ;
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline
